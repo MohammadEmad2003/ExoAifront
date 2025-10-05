@@ -33,12 +33,9 @@ expertise: ["Data Science", "Data Analysis", "ML Building Models"],
 bio: "I'm a 16-year-old student with experience in AI, especially in ML modeling, data analysis, Python. Learned C with Arduino and have multiple AI certificates.",
 image:  "src/pages/yeh.JPG",
 links: {
-github: "https://github.com/YahyaElshazly7
-",
-linkedin: "https://www.linkedin.com/in/yehia-elshazly-a885a5283/
-",
-email: "yehiaelshazly738@gmail.com
-"
+  github: "https://github.com/YahyaElshazly7",
+  linkedin: "https://www.linkedin.com/in/yehia-elshazly-a885a5283/",
+  email: "yehiaelshazly738@gmail.com"
 }
 },
   
