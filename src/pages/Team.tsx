@@ -26,36 +26,35 @@ const teamMembers = [
     }
   },
   {
-name: "Yehia Yasser Morsie Abdulrahman",
-role: "Student",
-institution: "Alhekma Language School",
-expertise: ["Data Science", "Data Analysis", "ML Building Models"],
-bio: "I'm a 16-year-old student with experience in AI, especially in ML modeling, data analysis, Python. Learned C with Arduino and have multiple AI certificates.",
-image:  "src/pages/yeh.JPG",
-links: {
-  github: "https://github.com/YahyaElshazly7",
-  linkedin: "https://www.linkedin.com/in/yehia-elshazly-a885a5283/",
-  email: "yehiaelshazly738@gmail.com"
-}
-},
-  
-{
-  "name": "Mohammad Emad",
-  "role": "Software Engineer",
-  "institution": "Helwan University",
-  "expertise": [
-    "Spring Boot",
-    "Full-Stack Development",
-    "DevOps"
-  ],
-  "bio": "Computer Engineering student passionate about software engineering, full-stack development. Experienced in backend systems with Spring Boot, exploring DevOps.",
-  "image": "src/pages/meh.JPG",
-  "links": {
-    "github": "https://github.com/MohammadEmad2003",
-    "linkedin": "https://www.linkedin.com/in/mohammademad2003",
-    "email": "memad.20003@gmail.com"
+    name: "Yehia Yasser Morsie Abdulrahman",
+    role: "Student",
+    institution: "Alhekma Language School",
+    expertise: ["Data Science", "Data Analysis", "ML Building Models"],
+    bio: "I'm a 16-year-old student with experience in AI, especially in ML modeling, data analysis, Python. Learned C with Arduino and have multiple AI certificates.",
+    image: "src/pages/yeh.JPG",
+    links: {
+      github: "https://github.com/YahyaElshazly7",
+      linkedin: "https://www.linkedin.com/in/yehia-elshazly-a885a5283/",
+      email: "yehiaelshazly738@gmail.com"
+    }
+  },
+  {
+    name: "Mohammad Emad",
+    role: "Software Engineer",
+    institution: "Helwan University",
+    expertise: [
+      "Spring Boot",
+      "Full-Stack Development",
+      "DevOps"
+    ],
+    bio: "Computer Engineering student passionate about software engineering, full-stack development. Experienced in backend systems with Spring Boot, exploring DevOps.",
+    image: "src/pages/meh.JPG",
+    links: {
+      github: "https://github.com/MohammadEmad2003",
+      linkedin: "https://www.linkedin.com/in/mohammademad2003",
+      email: "memad.20003@gmail.com"
+    }
   }
-}
 ];
 
 const acknowledgments = [
