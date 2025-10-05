@@ -1,20 +1,15 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
+import {
+  Github,
+  Linkedin,
+  Mail,
   ExternalLink,
   GraduationCap,
   Award,
-  Users
+  Users,
 } from "lucide-react";
-
-// ✅ Import images properly if they are in the same folder
-import ahmedImg from "./myImage_1to1_400px.JPG";
-import yehiaImg from "./yeh.JPG";
-import mohammadImg from "./meh.JPG";
 
 const teamMembers = [
   {
@@ -23,12 +18,12 @@ const teamMembers = [
     institution: "Cairo University",
     expertise: ["Deep Learning", "Quantum Computing", "Adversarial Machine Learning"],
     bio: "2+ years experience in machine learning applications.",
-    image: ahmedImg, // ✅ imported image
+    image: "./myImage_1to1_400px.JPG",
     links: {
       github: "https://github.com/ahmed-samir11",
       linkedin: "https://linkedin.com/in/ahmed-samir-fcai-cu",
-      email: "ahmedsamir1598@gmail.com"
-    }
+      email: "ahmedsamir1598@gmail.com",
+    },
   },
   {
     name: "Yehia Yasser Morsie Abdulrahman",
@@ -36,12 +31,12 @@ const teamMembers = [
     institution: "Alhekma Language School",
     expertise: ["Data Science", "Data Analysis", "ML Building Models"],
     bio: "I'm a 16-year-old student with experience in AI, especially in ML modeling, data analysis, Python. Learned C with Arduino and have multiple AI certificates.",
-    image: yehiaImg,
+    image: "./yeh.JPG",
     links: {
       github: "https://github.com/YahyaElshazly7",
       linkedin: "https://www.linkedin.com/in/yehia-elshazly-a885a5283/",
-      email: "yehiaelshazly738@gmail.com"
-    }
+      email: "yehiaelshazly738@gmail.com",
+    },
   },
   {
     name: "Mohammad Emad",
@@ -49,36 +44,36 @@ const teamMembers = [
     institution: "Helwan University",
     expertise: ["Spring Boot", "Full-Stack Development", "DevOps"],
     bio: "Computer Engineering student passionate about software engineering, full-stack development. Experienced in backend systems with Spring Boot, exploring DevOps.",
-    image: mohammadImg,
+    image: "./meh.JPG",
     links: {
       github: "https://github.com/MohammadEmad2003",
       linkedin: "https://www.linkedin.com/in/mohammademad2003",
-      email: "memad.20003@gmail.com"
-    }
-  }
+      email: "memad.20003@gmail.com",
+    },
+  },
 ];
 
 const acknowledgments = [
   {
     organization: "NASA Exoplanet Archive",
     contribution: "Kepler and TESS datasets, confirmed planet catalogs",
-    logo: "🛸"
+    logo: "🛸",
   },
   {
     organization: "Lightkurve Team",
     contribution: "Open-source tools for Kepler/TESS data analysis",
-    logo: "💡"
+    logo: "💡",
   },
   {
     organization: "STScI MAST",
     contribution: "Data hosting and archive services",
-    logo: "🔭"
+    logo: "🔭",
   },
   {
     organization: "Astropy Community",
     contribution: "Python libraries for astronomy and astrophysics",
-    logo: "🐍"
-  }
+    logo: "🐍",
+  },
 ];
 
 export default function Team() {
@@ -106,16 +101,17 @@ export default function Team() {
             {teamMembers.map((member, index) => (
               <Card key={index} className="card-cosmic p-6 text-center">
                 <div className="mb-4">
-                  {/* ✅ Proper image rendering */}
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover shadow-lg border-2 border-primary/40"
-                  />
+                  <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <GraduationCap className="h-12 w-12 text-primary" />
+                  </div>
 
                   <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-sm text-primary font-medium mb-1">{member.role}</p>
-                  <p className="text-sm text-muted-foreground">{member.institution}</p>
+                  <p className="text-sm text-primary font-medium mb-1">
+                    {member.role}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {member.institution}
+                  </p>
                 </div>
 
                 <div className="mb-4">
@@ -134,15 +130,25 @@ export default function Team() {
 
                 <div className="flex justify-center space-x-2">
                   <Button variant="outline" size="sm" asChild>
-                    <a href={member.links.github} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={member.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Github className="h-4 w-4" />
                     </a>
                   </Button>
+
                   <Button variant="outline" size="sm" asChild>
-                    <a href={member.links.linkedin} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={member.links.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Linkedin className="h-4 w-4" />
                     </a>
                   </Button>
+
                   <Button variant="outline" size="sm" asChild>
                     <a href={`mailto:${member.links.email}`}>
                       <Mail className="h-4 w-4" />
@@ -163,18 +169,23 @@ export default function Team() {
 
           <Card className="card-cosmic p-8">
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              This project would not have been possible without the contributions of the 
-              broader astronomical and open-source communities. We gratefully acknowledge 
-              the following organizations and their invaluable resources:
+              This project would not have been possible without the contributions
+              of the broader astronomical and open-source communities. We gratefully
+              acknowledge the following organizations and their invaluable resources:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
               {acknowledgments.map((ack, index) => (
-                <div key={index} className="flex items-start space-x-4 p-4 bg-muted/30 rounded-lg">
+                <div
+                  key={index}
+                  className="flex items-start space-x-4 p-4 bg-muted/30 rounded-lg"
+                >
                   <div className="text-2xl">{ack.logo}</div>
                   <div className="flex-1">
                     <h4 className="font-semibold mb-1">{ack.organization}</h4>
-                    <p className="text-sm text-muted-foreground">{ack.contribution}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {ack.contribution}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -189,18 +200,18 @@ export default function Team() {
               Interested in Collaborating?
             </h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              We welcome collaborations with researchers, institutions, and organizations 
-              interested in advancing AI applications in astronomy. Whether you have datasets, 
-              expertise, or computational resources to contribute, we'd love to hear from you.
+              We welcome collaborations with researchers, institutions, and
+              organizations interested in advancing AI applications in astronomy.
+              Whether you have datasets, expertise, or computational resources
+              to contribute, we'd love to hear from you.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="btn-stellar">
-                <Mail className="h-4 w-4 mr-2" />
-                Contact Us
+                <Mail className="h-4 w-4 mr-2" /> Contact Us
               </Button>
               <Button variant="outline">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Join Our Slack
+                <ExternalLink className="h-4 w-4 mr-2" /> Join Our Slack
               </Button>
             </div>
           </Card>
