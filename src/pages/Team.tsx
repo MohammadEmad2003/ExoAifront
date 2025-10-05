@@ -105,9 +105,13 @@ export default function Team() {
             {teamMembers.map((member, index) => (
               <Card key={index} className="card-cosmic p-6 text-center">
                 <div className="mb-4">
-                  <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <GraduationCap className="h-12 w-12 text-primary" />
-                  </div>
+                 <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-primary/50 shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
                   <h3 className="text-xl font-bold mb-1">{member.name}</h3>
                   <p className="text-sm text-primary font-medium mb-1">{member.role}</p>
                   <p className="text-sm text-muted-foreground">{member.institution}</p>
