@@ -18,7 +18,7 @@ const teamMembers = [
     institution: "Cairo University",
     expertise: ["Deep Learning", "Quantum Computing", "Adversarial Machine Learning"],
     bio: "2+ years experience in machine learning applications.",
-    image: "./myImage_1to1_400px.JPG",
+    image: "myImage_1to1_400px.JPG",
     links: {
       github: "https://github.com/ahmed-samir11",
       linkedin: "https://linkedin.com/in/ahmed-samir-fcai-cu",
