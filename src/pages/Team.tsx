@@ -10,9 +10,12 @@ import {
   Award,
   Users
 } from "lucide-react";
-import ahmedImage from "./myImage_1to1_400px.JPG";
-import yehiaImage from "./yeh.JPG";
-import mohammadImage from "./meh.JPG";
+
+// ✅ Import images properly if they are in the same folder
+import ahmedImg from "./myImage_1to1_400px.JPG";
+import yehiaImg from "./yeh.JPG";
+import mohammadImg from "./meh.JPG";
+
 const teamMembers = [
   {
     name: "Ahmed Samir",
@@ -20,7 +23,7 @@ const teamMembers = [
     institution: "Cairo University",
     expertise: ["Deep Learning", "Quantum Computing", "Adversarial Machine Learning"],
     bio: "2+ years experience in machine learning applications.",
-    image: ahmedImage,
+    image: ahmedImg, // ✅ imported image
     links: {
       github: "https://github.com/ahmed-samir11",
       linkedin: "https://linkedin.com/in/ahmed-samir-fcai-cu",
@@ -33,7 +36,7 @@ const teamMembers = [
     institution: "Alhekma Language School",
     expertise: ["Data Science", "Data Analysis", "ML Building Models"],
     bio: "I'm a 16-year-old student with experience in AI, especially in ML modeling, data analysis, Python. Learned C with Arduino and have multiple AI certificates.",
-    image: yehiaImage,
+    image: yehiaImg,
     links: {
       github: "https://github.com/YahyaElshazly7",
       linkedin: "https://www.linkedin.com/in/yehia-elshazly-a885a5283/",
@@ -44,13 +47,9 @@ const teamMembers = [
     name: "Mohammad Emad",
     role: "Software Engineer",
     institution: "Helwan University",
-    expertise: [
-      "Spring Boot",
-      "Full-Stack Development",
-      "DevOps"
-    ],
+    expertise: ["Spring Boot", "Full-Stack Development", "DevOps"],
     bio: "Computer Engineering student passionate about software engineering, full-stack development. Experienced in backend systems with Spring Boot, exploring DevOps.",
-    image: mohammadImage,
+    image: mohammadImg,
     links: {
       github: "https://github.com/MohammadEmad2003",
       linkedin: "https://www.linkedin.com/in/mohammademad2003",
@@ -102,23 +101,23 @@ export default function Team() {
             <Users className="h-8 w-8 text-primary mr-3" />
             <h2 className="text-2xl font-bold">Core Team</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="card-cosmic p-6 text-center">
                 <div className="mb-4">
-                 <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-primary/50 shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+                  {/* ✅ Proper image rendering */}
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-300"
+                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover shadow-lg border-2 border-primary/40"
                   />
-                </div>
+
                   <h3 className="text-xl font-bold mb-1">{member.name}</h3>
                   <p className="text-sm text-primary font-medium mb-1">{member.role}</p>
                   <p className="text-sm text-muted-foreground">{member.institution}</p>
                 </div>
-                
+
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-1 justify-center">
                     {member.expertise.map((skill, skillIndex) => (
@@ -128,11 +127,11 @@ export default function Team() {
                     ))}
                   </div>
                 </div>
-                
+
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                   {member.bio}
                 </p>
-                
+
                 <div className="flex justify-center space-x-2">
                   <Button variant="outline" size="sm" asChild>
                     <a href={member.links.github} target="_blank" rel="noopener noreferrer">
@@ -161,14 +160,14 @@ export default function Team() {
             <Award className="h-8 w-8 text-secondary mr-3" />
             <h2 className="text-2xl font-bold">Acknowledgments</h2>
           </div>
-          
+
           <Card className="card-cosmic p-8">
             <p className="text-muted-foreground mb-6 leading-relaxed">
               This project would not have been possible without the contributions of the 
               broader astronomical and open-source communities. We gratefully acknowledge 
               the following organizations and their invaluable resources:
             </p>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               {acknowledgments.map((ack, index) => (
                 <div key={index} className="flex items-start space-x-4 p-4 bg-muted/30 rounded-lg">
