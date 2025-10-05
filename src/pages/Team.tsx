@@ -10,7 +10,9 @@ import {
   Award,
   Users
 } from "lucide-react";
-
+import ahmedImage from "./myImage_1to1_400px.JPG";
+import yehiaImage from "./yeh.JPG";
+import mohammadImage from "./meh.JPG";
 const teamMembers = [
   {
     name: "Ahmed Samir",
@@ -18,7 +20,7 @@ const teamMembers = [
     institution: "Cairo University",
     expertise: ["Deep Learning", "Quantum Computing", "Adversarial Machine Learning"],
     bio: "2+ years experience in machine learning applications.",
-    image: "./myImage_1to1_400px.JPG",
+    image: ahmedImage,
     links: {
       github: "https://github.com/ahmed-samir11",
       linkedin: "https://linkedin.com/in/ahmed-samir-fcai-cu",
@@ -31,7 +33,7 @@ const teamMembers = [
     institution: "Alhekma Language School",
     expertise: ["Data Science", "Data Analysis", "ML Building Models"],
     bio: "I'm a 16-year-old student with experience in AI, especially in ML modeling, data analysis, Python. Learned C with Arduino and have multiple AI certificates.",
-    image: "./yeh.JPG",
+    image: yehiaImage,
     links: {
       github: "https://github.com/YahyaElshazly7",
       linkedin: "https://www.linkedin.com/in/yehia-elshazly-a885a5283/",
@@ -48,7 +50,7 @@ const teamMembers = [
       "DevOps"
     ],
     bio: "Computer Engineering student passionate about software engineering, full-stack development. Experienced in backend systems with Spring Boot, exploring DevOps.",
-    image: "./meh.JPG",
+    image: mohammadImage,
     links: {
       github: "https://github.com/MohammadEmad2003",
       linkedin: "https://www.linkedin.com/in/mohammademad2003",
